@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-go@v6
+      - uses: actions/setup-go@v7
         with: {go-version: 1.26.x, check-latest: true, cache: false}  # latest patch; no deps to cache
       - run: go vet ./... && go test -race ./...
       - name: govulncheck (Go stdlib + modules)
